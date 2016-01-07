@@ -759,6 +759,7 @@ private:
 public:
     /// The SIMD vector width of the members.
     static constexpr size_t size() { return N; }
+    static constexpr size_t Size = N;
 
     /// The vectorized base class template instantiation this Adapter class derives from.
     using base_type = Base;
@@ -1312,8 +1313,8 @@ template <typename T, size_t N,
           typename = typename std::iterator_traits<T>::iterator_category>
 class Iterator;
 
-template <typename T, size_t N, IteratorDetails::Mutable M, typename V, size_t Size>
-class Iterator<T, N, M, V, Size, std::forward_iterator_tag>
+template <typename T, size_t N, IteratorDetails::Mutable M, typename V, size_t Size_>
+class Iterator<T, N, M, V, Size_, std::forward_iterator_tag>
     : public std::iterator<typename std::iterator_traits<T>::iterator_category, V,
                            typename std::iterator_traits<T>::difference_type,
                            IteratorDetails::Pointer<T, V, M>,
@@ -1327,7 +1328,8 @@ public:
         IteratorDetails::Reference<T, V, IteratorDetails::Mutable::No>;
 
     /// Returns the vector width the iterator covers with each step.
-    static constexpr std::size_t size() { return Size; }
+    static constexpr std::size_t size() { return Size_; }
+    static constexpr std::size_t Size = Size_;
 
     Iterator() = default;
 
