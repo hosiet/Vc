@@ -226,7 +226,7 @@ template <typename T> class Vector<T, VectorAbi::Scalar>
         }
         Vc_ALWAYS_INLINE EntryType sum(Mask m) const { if (m.data()) return m_data; return static_cast<EntryType>(0); }
 
-        Vc_INTRINSIC Vector shifted(int amount, Vector shiftIn) const {
+        Vc_INTRINSIC Vector Vc_VDECL shifted(int amount, Vector shiftIn) const {
             Vc_ASSERT(amount >= -1 && amount <= 1);
             return amount == 0 ? *this : shiftIn;
         }
@@ -269,7 +269,7 @@ template <typename T> class Vector<T, VectorAbi::Scalar>
             return gen(0);
         }
 
-        Vc_INTRINSIC Vc_DEPRECATED("use copysign(x, y) instead") Vector
+        Vc_INTRINSIC Vc_DEPRECATED("use copysign(x, y) instead") Vector Vc_VDECL
             copySign(Vector reference) const
         {
             return Vc::copysign(*this, reference);
@@ -280,8 +280,8 @@ template <typename T> class Vector<T, VectorAbi::Scalar>
             return Vc::exponent(*this);
         }
 
-        Vc_INTRINSIC Vector interleaveLow(Vector) const { return *this; }
-        Vc_INTRINSIC Vector interleaveHigh(Vector x) const { return x; }
+        Vc_INTRINSIC Vector Vc_VDECL interleaveLow(Vector) const { return *this; }
+        Vc_INTRINSIC Vector Vc_VDECL interleaveHigh(Vector x) const { return x; }
 };
 #undef Vc_CURRENT_CLASS_NAME
 template <typename T> constexpr size_t Vector<T, VectorAbi::Scalar>::Size;

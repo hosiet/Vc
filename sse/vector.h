@@ -156,7 +156,7 @@ template <typename T> class Vector<T, VectorAbi::Sse>
         Vc_INTRINSIC decltype(d.ref(0)) operator[](size_t index) { return d.ref(index); }
         Vc_INTRINSIC_L EntryType operator[](size_t index) const Vc_PURE Vc_INTRINSIC_R;
 
-        Vc_INTRINSIC_L Vector operator[](SSE::int_v perm) const Vc_INTRINSIC_R;
+        Vc_INTRINSIC_L Vector Vc_VDECL operator[](SSE::Vector<int> perm) const Vc_INTRINSIC_R;
 
         Vc_INTRINSIC Vc_PURE Mask operator!() const
         {
@@ -189,18 +189,18 @@ template <typename T> class Vector<T, VectorAbi::Sse>
         Vc_OP(*, mul)
 #undef Vc_OP
 
-        Vc_INTRINSIC_L Vector &operator<<=(AsArg shift)       Vc_INTRINSIC_R;
-        Vc_INTRINSIC_L Vector  operator<< (AsArg shift) const Vc_INTRINSIC_R;
-        Vc_INTRINSIC_L Vector &operator<<=(  int shift)       Vc_INTRINSIC_R;
-        Vc_INTRINSIC_L Vector  operator<< (  int shift) const Vc_INTRINSIC_R;
-        Vc_INTRINSIC_L Vector &operator>>=(AsArg shift)       Vc_INTRINSIC_R;
-        Vc_INTRINSIC_L Vector  operator>> (AsArg shift) const Vc_INTRINSIC_R;
-        Vc_INTRINSIC_L Vector &operator>>=(  int shift)       Vc_INTRINSIC_R;
-        Vc_INTRINSIC_L Vector  operator>> (  int shift) const Vc_INTRINSIC_R;
+        Vc_INTRINSIC_L Vector Vc_VDECL &operator<<=(AsArg shift)       Vc_INTRINSIC_R;
+        Vc_INTRINSIC_L Vector Vc_VDECL  operator<< (AsArg shift) const Vc_INTRINSIC_R;
+        Vc_INTRINSIC_L Vector Vc_VDECL &operator<<=(  int shift)       Vc_INTRINSIC_R;
+        Vc_INTRINSIC_L Vector Vc_VDECL  operator<< (  int shift) const Vc_INTRINSIC_R;
+        Vc_INTRINSIC_L Vector Vc_VDECL &operator>>=(AsArg shift)       Vc_INTRINSIC_R;
+        Vc_INTRINSIC_L Vector Vc_VDECL  operator>> (AsArg shift) const Vc_INTRINSIC_R;
+        Vc_INTRINSIC_L Vector Vc_VDECL &operator>>=(  int shift)       Vc_INTRINSIC_R;
+        Vc_INTRINSIC_L Vector Vc_VDECL  operator>> (  int shift) const Vc_INTRINSIC_R;
 
-        inline Vector &operator/=(EntryType x);
-        inline Vector &operator/=(Vector x);
-        inline Vc_PURE_L Vector operator/(Vector x) const Vc_PURE_R;
+        inline Vector &Vc_VDECL operator/=(EntryType x);
+        inline Vector &Vc_VDECL operator/=(Vector x);
+        inline Vc_PURE_L Vector Vc_VDECL operator/(Vector x) const Vc_PURE_R;
 
 #define Vc_OP(symbol)                                                                    \
     Vc_INTRINSIC Vector &operator symbol##=(const Vector &x)                             \
