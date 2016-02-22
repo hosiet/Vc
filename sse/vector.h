@@ -189,14 +189,14 @@ template <typename T> class Vector<T, VectorAbi::Sse>
         Vc_OP(*, mul)
 #undef Vc_OP
 
-        Vc_INTRINSIC_L Vector Vc_VDECL &operator<<=(AsArg shift)       Vc_INTRINSIC_R;
-        Vc_INTRINSIC_L Vector Vc_VDECL  operator<< (AsArg shift) const Vc_INTRINSIC_R;
-        Vc_INTRINSIC_L Vector Vc_VDECL &operator<<=(  int shift)       Vc_INTRINSIC_R;
-        Vc_INTRINSIC_L Vector Vc_VDECL  operator<< (  int shift) const Vc_INTRINSIC_R;
-        Vc_INTRINSIC_L Vector Vc_VDECL &operator>>=(AsArg shift)       Vc_INTRINSIC_R;
-        Vc_INTRINSIC_L Vector Vc_VDECL  operator>> (AsArg shift) const Vc_INTRINSIC_R;
-        Vc_INTRINSIC_L Vector Vc_VDECL &operator>>=(  int shift)       Vc_INTRINSIC_R;
-        Vc_INTRINSIC_L Vector Vc_VDECL  operator>> (  int shift) const Vc_INTRINSIC_R;
+        Vc_INTRINSIC_L Vector &Vc_VDECL operator<<=(AsArg shift)       Vc_INTRINSIC_R;
+        Vc_INTRINSIC_L Vector  Vc_VDECL operator<< (AsArg shift) const Vc_INTRINSIC_R;
+        Vc_INTRINSIC_L Vector &Vc_VDECL operator<<=(  int shift)       Vc_INTRINSIC_R;
+        Vc_INTRINSIC_L Vector  Vc_VDECL operator<< (  int shift) const Vc_INTRINSIC_R;
+        Vc_INTRINSIC_L Vector &Vc_VDECL operator>>=(AsArg shift)       Vc_INTRINSIC_R;
+        Vc_INTRINSIC_L Vector  Vc_VDECL operator>> (AsArg shift) const Vc_INTRINSIC_R;
+        Vc_INTRINSIC_L Vector &Vc_VDECL operator>>=(  int shift)       Vc_INTRINSIC_R;
+        Vc_INTRINSIC_L Vector  Vc_VDECL operator>> (  int shift) const Vc_INTRINSIC_R;
 
         inline Vector &Vc_VDECL operator/=(EntryType x);
         inline Vector &Vc_VDECL operator/=(Vector x);
