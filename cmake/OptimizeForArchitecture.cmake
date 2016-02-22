@@ -115,9 +115,9 @@ macro(AutodetectHostArchitecture)
             set(TARGET_ARCHITECTURE "silvermont")
          elseif(_cpu_model EQUAL 0x66)
             set(TARGET_ARCHITECTURE "cannonlake")
-         elseif(_cpu_model EQUAL 0x55)
+         elseif(_cpu_model EQUAL 85) # 55
             set(TARGET_ARCHITECTURE "skylake-xeon")
-         elseif(_cpu_model EQUAL 0x4E OR _cpu_model EQUAL 0x5E)
+         elseif(_cpu_model EQUAL 78 OR _cpu_model EQUAL 94) # 4E, 5E
             set(TARGET_ARCHITECTURE "skylake")
          elseif(_cpu_model EQUAL 0x3D OR _cpu_model EQUAL 0x47 OR _cpu_model EQUAL 0x56)
             set(TARGET_ARCHITECTURE "broadwell")
