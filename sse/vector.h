@@ -156,7 +156,7 @@ template <typename T> class Vector<T, VectorAbi::Sse>
         Vc_INTRINSIC decltype(d.ref(0)) operator[](size_t index) { return d.ref(index); }
         Vc_INTRINSIC_L EntryType operator[](size_t index) const Vc_PURE Vc_INTRINSIC_R;
 
-        Vc_INTRINSIC_L Vector Vc_VDECL operator[](SSE::Vector<int> perm) const Vc_INTRINSIC_R;
+        Vc_INTRINSIC_L Vector Vc_VDECL operator[](const SSE::int_v &perm) const Vc_INTRINSIC_R;
 
         Vc_INTRINSIC Vc_PURE Mask operator!() const
         {
