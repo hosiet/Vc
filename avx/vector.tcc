@@ -222,6 +222,7 @@ Vc_ALWAYS_INLINE AVX2::uint_v Vc_PURE AVX2::uint_v::operator/(AVX2::uint_v x) co
 template <typename T> static inline __m256i Vc_CONST divShort(__m256i a, __m256i b)
 {
     using namespace AVX;
+    using AVX::float_v;
     const __m256 lo =
         _mm256_div_ps(convert<T, float>(lo128(a)), convert<T, float>(lo128(b)));
     const __m256 hi =
