@@ -63,6 +63,11 @@ public:
         mask.setEntry(offset, x);
         return *this;
     }
+
+    Vc_INTRINSIC bool operator!() const
+    {
+        return !operator bool();
+    }
 };
 
 namespace
