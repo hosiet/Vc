@@ -1,6 +1,6 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: vc
-Source: http://code.compeng.uni-frankfurt.de/projects/vc
+Source: https://github.com/VcDevel/Vc
 
 Files: *
 Copyright: 2009-2012 Matthias Kretz <kretz@kde.org>
@@ -56,6 +56,7 @@ License: BSD CMake
 
 Files: debian/*
 Copyright: 2013 Jonathan Riddell <jriddell@ubuntu.com>
+           2016 Boyuan Yang <073plan@gmail.com>
 License: GPL-2+
  This package is free software; you can redistribute it and/or modify
  it under the terms of the GNU General Public License as published by

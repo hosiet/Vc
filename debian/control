@@ -1,16 +1,23 @@
 Source: vc
 Priority: extra
 Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+Uploaders: Boyuan Yang <073plan@gmail.com>
 XSBC-Original-Maintainer: Jonathan Riddell <jriddell@ubuntu.com>
-Build-Depends: debhelper (>= 8.0.0), cmake
-Standards-Version: 3.9.4
+Build-Depends:
+ cmake,
+ debhelper (>= 10),
+Standards-Version: 3.9.8
 Section: libs
-Homepage: http://code.compeng.uni-frankfurt.de/projects/vc
+Homepage: https://github.com/VcDevel/Vc
+Vcs-Git: https://github.com/VcDevel/Vc.git
+Vcs-Browser: https://github.com/VcDevel/Vc
 
 Package: vc-dev
 Section: libdevel
 Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
+Depends:
+ ${misc:Depends},
+ ${shlibs:Depends},
 Description: library to ease explicit vectorization of C++ code
  Vc is a free software library to ease explicit vectorization of C++
  code. It has an intuitive API and provides portability between

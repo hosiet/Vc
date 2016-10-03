@@ -9,7 +9,10 @@
 # Uncomment this to turn on verbose mode.
 #export DH_VERBOSE=1
 
+# Security Hardening
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
 %:
 	dh $@ 
 
-.PHONY: override_dh_auto_test
+override_dh_auto_test:
