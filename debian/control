@@ -1,0 +1,24 @@
+Source: vc
+Priority: extra
+Maintainer: Kubuntu Developers <kubuntu-devel@lists.ubuntu.com>
+XSBC-Original-Maintainer: Jonathan Riddell <jriddell@ubuntu.com>
+Build-Depends: debhelper (>= 8.0.0), cmake
+Standards-Version: 3.9.4
+Section: libs
+Homepage: http://code.compeng.uni-frankfurt.de/projects/vc
+
+Package: vc-dev
+Section: libdevel
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: library to ease explicit vectorization of C++ code
+ Vc is a free software library to ease explicit vectorization of C++
+ code. It has an intuitive API and provides portability between
+ different compilers and compiler versions as well as portability
+ between different vector instruction sets. Thus an application
+ written with Vc can be compiled for
+  - AVX
+  - SSE2 up to SSE4.2
+  - SSE4a, XOP, and FMA4
+  - Scalar (fallback which works everywhere)
+  - LRBni support disabled, waiting for MIC

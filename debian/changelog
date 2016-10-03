@@ -1,0 +1,39 @@
+vc (0.7.4-0ubuntu1) utopic; urgency=medium
+
+  * New upstream release
+  * Add kubuntu_disable-broken-tests.diff queried upstream
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Mon, 11 Aug 2014 13:59:59 +0200
+
+vc (0.7.3-0ubuntu1) saucy; urgency=low
+
+  * New upstream release (LP: #1223876) 
+
+ -- Howard Chan <smartboyhw@gmail.com>  Wed, 11 Sep 2013 20:44:19 +0800
+
+vc (0.7.2-0ubuntu1) saucy; urgency=low
+
+  * New upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Fri, 07 Jun 2013 16:39:44 +0100
+
+vc (0.7.0-0ubuntu3) raring; urgency=low
+
+  * Add kubuntu_01_git.diff to bring up to date with git branch
+   - Adds full licence to cmake modules
+   - Installs into lib suffix for multiarch
+  * Update copyright
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Sat, 09 Mar 2013 00:14:57 +0000
+
+vc (0.7.0-0ubuntu2) raring; urgency=low
+
+  * Rename binary to vc-dev, a libvc-dev is already in the archive
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Fri, 08 Mar 2013 22:34:36 +0000
+
+vc (0.7.0-0ubuntu1) raring; urgency=low
+
+  * Initial release LP: #1144539
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Fri, 08 Mar 2013 12:50:59 +0000
